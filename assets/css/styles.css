@@ -534,6 +534,13 @@ iframe {
     margin-bottom: 15px;
   }
 }
+
+/* 2017 */
+.circular-image {
+  border-radius:  50%;
+}
+
+
 /* Small devices (tablets, 768px and up) */
 /* Medium devices (desktops, 992px and up) */
 /* Large devices (large desktops, 1200px and up) */
