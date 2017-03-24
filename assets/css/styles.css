@@ -501,6 +501,10 @@ iframe {
   text-align: center;
 }
 
+.mg-top {
+  margin-top: 30px!important;
+}
+
 /* ======= Footer ======= */
 .footer {
   background: #32383e;

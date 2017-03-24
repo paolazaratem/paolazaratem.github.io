@@ -12,15 +12,27 @@
 
     <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'> 
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">
     
+    <!-- github calendar-->
     <script src="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.min.js"></script>
     <link rel="stylesheet"href="https://cdn.rawgit.com/IonicaBizau/github-calendar/gh-pages/dist/github-calendar.css"/>
 
-    <link rel="stylesheet" href="assets/plugins/github-activity/src/github-activity.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+    <!-- github-activity -->
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/plugins/github-activity/src/github-activity.css"/>
+    <link rel="stylesheet" href="assets/plugins/octicons/octicons.css">
+    <script type="text/javascript" src="assets/plugins/mustache/mustache.min.js"></script>
+
+    
+    <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity-0.1.4.min.js"></script>
+
+    <script>
+        //GitHubActivity.feed({ username: 'paolazaratem', selector: '#feed' });
+    </script>
+
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    
 </head>
 <body>
     <header class="header">
@@ -59,13 +71,16 @@
 
                 <section class="github section">
                     <div class="section-inner">
-                        <h2 class="heading">My GitHub</h2>
-
+                        <h2 class="heading tx-center">My GitHub</h2>
                         <div class="calendar">
                             Loading the data just for you.
                         </div>
+                        <h2 class="heading tx-center">GitHub Activity</h2>
+                        <div id="feed">
+                             Loading the data just for you.
+                        </div>
 
-                        <p>You can also embed your GitHub activities using Casey Scarborough's <a href="http://caseyscarborough.com/projects/github-activity/" target="_blank">GitHub Activity Stream</a> widget.        
+
                         <!--//Usage: http://caseyscarborough.com/projects/github-activity/ -->                       
                         <div id="ghfeed" class="ghfeed">
                         </div>
@@ -252,9 +267,10 @@
             </div>   
         </div>
     </div>
-    
+
     <script>
         GitHubCalendar(".calendar", "paolazaratem");
+        GitHubActivity.feed({ username: 'paolazaratem', selector: '#feed' });
     </script>
 
     <footer class="footer">
@@ -270,8 +286,9 @@
     <script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>-->
     
     <!-- github activity plugin -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script>
+   <!-- <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/github-activity/src/github-activity.js"></script> -->
+
     <!-- custom js -->
     <script type="text/javascript" src="assets/js/main.js"></script>            
 </body>
